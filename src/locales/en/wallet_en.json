@@ -1,0 +1,179 @@
+{
+  "address": "Address",
+  "address-is": "$t(wallet:address): {{address}}",
+  "alert": {
+    "kyc-conflict": {
+      "content": "Your transaction could conflict with existing asset rules based on counter-party credentials.",
+      "sub-content": "Are you sure you want to proceed with this transaction?",
+      "title": "Please confirm your action"
+    },
+    "no-rule": "Asset: {{assetId}} has no set rule.",
+    "not-completed-kyc": "Receiver: {{address}} does not have the corresponding credential.",
+    "not-completed-kyc-sender": "Sender: {{address}} does not have the corresponding credential."
+  },
+  "asset-information": "Asset information",
+  "balance": "Balance",
+  "balance-amount": "Balance: {{amount}} {{currency}}",
+  "balance-description": "This is your spendable balance",
+  "balance-is": "Balance: ",
+  "create": {
+    "creating": {
+      "content": "This might take some time, please do not close the window.",
+      "title": "Creating wallet, please wait"
+    },
+    "phrase": {
+      "content": "Please write down or save the backup mnemonic phrase in a safe place. If you lose the backup mnemonic phrase, you won't be able to recover or access.",
+      "title": "Backup mnemonic phrase"
+    },
+    "policy": {
+      "content": {
+        "disclaimer-of-liability": {
+          "content": "Use our wallet at your own risk. We are not liable for any damages or loss of funds.",
+          "title": "Disclaimer of Liability"
+        },
+        "privacy": {
+          "content": "We handle your personal information in accordance with our privacy policy.",
+          "title": "Privacy"
+        },
+        "prohibited-activities": {
+          "content": "Illegal activities are strictly prohibited.",
+          "title": "Prohibited Activities"
+        },
+        "security-measures": {
+          "content": "While we employ security measures, we are not liable for unauthorized access or loss of funds.",
+          "title": "Security Measures"
+        },
+        "terms": {
+          "content": "By creating and using our crypto wallet, you agree to comply with our terms and conditions.",
+          "title": "Acceptance of Terms"
+        },
+        "user-responsibility": {
+          "content": "You are responsible for the security and confidentiality of your wallet information.",
+          "title": "User Responsibility"
+        }
+      },
+      "title": "Policy"
+    },
+    "read-policy-and-terms": "I have read and agree to the terms and conditions.",
+    "terms-of-use": {
+      "content": {
+        "compliance-with-laws": {
+          "content": "Comply with applicable laws and regulations.",
+          "title": "Compliance with Laws"
+        },
+        "modification-of-terms": {
+          "content": "We may modify the terms, and your continued use constitutes acceptance.",
+          "title": "Modification of terms"
+        },
+        "service-availability": {
+          "content": "We may suspend or terminate the service without notice.",
+          "title": "Service availability"
+        },
+        "transactions": {
+          "content": "Verify transaction details before confirming.",
+          "title": "Transactions"
+        },
+        "wallet-access": {
+          "content": "Maintain the confidentiality of your login credentials.",
+          "title": "Wallet Access"
+        },
+        "wallet-creation": {
+          "content": "Provide accurate information when creating your wallet.",
+          "title": "Wallet Creation"
+        }
+      },
+      "title": "Terms of Use"
+    },
+    "title": "Create new wallet"
+  },
+  "create-or-import": "If you don't currently have a wallet, please select “$t(common:action.create)” to create a new wallet. If you already possess a wallet, please select “$t(common:action.import)”.",
+  "creating": {
+    "content": "It may take some time, please do not leave the window.",
+    "title": "Creating wallet, please wait"
+  },
+  "empty": "Asset is empty",
+  "history": {
+    "from": "From",
+    "from-address": "From address",
+    "from-address-is": "From: ",
+    "quantity": "Quantity",
+    "status": "Status",
+    "time": "Time",
+    "to": "To",
+    "to-address": "To address",
+    "to-address-is": "To: ",
+    "transaction-count": "Transaction: {{count}}",
+    "transaction-id": "Transaction ID",
+    "transaction-type": "Transaction type",
+    "tx-status": {
+      "on-chain": "On chain",
+      "pending": "Pending"
+    },
+    "type": "Type",
+    "type-is": {
+      "retirement": "Retirement",
+      "retirement-transaction": "Retirement transaction",
+      "transaction": "Transfer",
+      "transfer": "Transfer transaction"
+    },
+    "violation": "Red flag indicator",
+    "violation-incidents": "Red flag incidents",
+    "violation-status": {
+      "normal": "Normal",
+      "violating": "Red Flag"
+    }
+  },
+  "import": {
+    "input": "input your mnemonic",
+    "invalid": "Invalid mnemonic phrase",
+    "title": "Import your mnemonic"
+  },
+  "my-assets": "Held Assets",
+  "my-wallet": "Accounts",
+  "phrase": {
+    "content": "Write backup phrases down or save them to a secure place, they cannot be recovered or retrieved if you lose them.",
+    "title": "Backup phrase"
+  },
+  "quantity-held": "Quantity held",
+  "required-information": "*Required information",
+  "retirement": {
+    "beneficiary-description": "Text entered here will be visible on the blockchain. This is an optional field.",
+    "beneficiary-name": "Beneficiary name",
+    "beneficiary-name-description": "Text entered here will be visible on the blockchain. This is an optional field.",
+    "beneficiary-wallet-address": "Beneficiary wallet address",
+    "beneficiary-wallet-address-description": "The Wallet address of the beneficiary to be recorded on the blockchain. Can be used by the beneficiary to prove claimed retirements for auditing purposes.",
+    "count": "Retirement: {{count}}",
+    "description": "The Wallet address of the beneficiary to be recorded on the blockchain. Can be used by the beneficiary to prove claimed retirements for auditing purposes.",
+    "my-address": "My address",
+    "quantity": "Retirement quantity"
+  },
+  "sending": {
+    "destination-address": "Transfer to",
+    "memo": "Memo",
+    "memo-description": "Text input into the ‘Memo’ field will be visible on the blockchain.",
+    "send-quantity": "Send quantity",
+    "transaction-fee": "Transaction fee",
+    "transfer-from": "Transfer from",
+    "transfer-to": "Transfer to"
+  },
+  "transaction": {
+    "info": "Transaction information",
+    "input": {
+      "amount-format-error": "Amount input format is error.",
+      "fee": "Fee",
+      "insufficient-amount": "Amount entered is higher than the amount you currently hold. Please lower the amount so that it is below the number displayed in your wallet.",
+      "quantity": "Quantity"
+    },
+    "result": {
+      "completed": "Transaction completed",
+      "completed-description": "This transaction has been submitted to the blockchain with this transaction ID. It should be confirmed within a few minutes. Until then, it will appear in your transaction history as ‘Pending’.",
+      "title": "Transaction result"
+    }
+  },
+  "transaction-history": "Transaction history",
+  "transaction-information": "Transaction information",
+  "wallet-kyc-level": "Account holder credential types",
+  "welcome": "Welcome to Climate Wallet",
+  "synced": "Synced",
+  "not-synced": "Not synced"
+}

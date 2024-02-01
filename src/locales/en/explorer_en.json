@@ -1,0 +1,16 @@
+{
+  "beneficiary": "Beneficiary",
+  "issuance-info": "Issuance info",
+  "project-info": "Project info",
+  "receiver": "Receiver",
+  "sender": "Sender",
+  "transfers": "Transfers",
+  "sender-address": "Sender address",
+  "receiver-address": "Receiver address",
+  "beneficiary-address": "Beneficiary address",
+  "search": "$t(common:action.search) CAT ID, $t(rule:data.unit-vintage-year), $t(rule:data.unit-serial-number)",
+  "type": {
+    "PERMISSIONLESS_RETIREMENT": "Retirement",
+    "TOKENIZATION": "Tokenization"
+  }
+}

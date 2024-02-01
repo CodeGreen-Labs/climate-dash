@@ -1,0 +1,16 @@
+{
+  "beneficiary": "受益者",
+  "beneficiary-address": "受益者地址",
+  "issuance-info": "發行內容",
+  "project-info": "專案內容",
+  "receiver": "接收者",
+  "receiver-address": "接收者地址",
+  "sender": "傳送者",
+  "sender-address": "傳送者地址",
+  "transfers": "交易歷史",
+  "search": "$t(common:action.search) CAT ID, $t(rule:data.unit-vintage-year), $t(rule:data.unit-serial-number)",
+  "type": {
+    "PERMISSIONLESS_RETIREMENT": "銷毀",
+    "TOKENIZATION": "代幣化"
+  }
+}

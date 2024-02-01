@@ -1,0 +1,31 @@
+{
+  "climate": "Climate",
+  "dashboard": "Dashboard",
+  "explorer": "DASHboard",
+  "kyc": "Credentials",
+  "my-wallet": "Accounts (Wallet)",
+  "route": {
+    "/explorer": "DASHboard",
+    "/explorer/details": "DASHboard details",
+    "/kyc": "Credentials",
+    "/kyc/create": "Create credential",
+    "/kyc/dashboard": "Credential dashboard",
+    "/kyc/details": "Detailed credential",
+    "/kyc/edit": "Edit credential",
+    "/kyc/import-preview": "credential import preview",
+    "/rule": "Asset rules",
+    "/rule/create": "Create a rule",
+    "/rule/dashboard": "Dashboard",
+    "/rule/details": "Rule details",
+    "/rule/edit": "Edit rule",
+    "/wallet": "Accounts",
+    "/wallet/create-mnemonic": "Create a wallet",
+    "/wallet/detail": "Accounts",
+    "/wallet/import-mnemonic": "Import  wallet",
+    "/wallet/retire": "Retire",
+    "/wallet/send": "Send"
+  },
+  "rule": "Asset Rules",
+  "tokenizer": "Tokenizer",
+  "wallet": "Accounts (Wallet)"
+}

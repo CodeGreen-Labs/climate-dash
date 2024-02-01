@@ -1,0 +1,37 @@
+{
+  "alert": {
+    "commit": {
+      "confirmed": "I have confirmed that the transaction details are correct.",
+      "content": "This action is irreversible once submitted, please ensure the details here are correct.",
+      "title": "Irrevocable once submitted"
+    },
+    "commit-failed": {
+      "content": "Commit unsuccessful. Please press the Commit button to try committing again.",
+      "title": "Commit issues"
+    },
+    "committed": {
+      "content": "{{count}} cases have been committed successfully."
+    },
+    "uncommitted": {
+      "content_one": "There is {{count}} case pending commitment. To update the data, please click the commit button.",
+      "content_other": "There are {{count}} cases pending commitment. To update the data, please click the commit button.",
+      "title_one": "{{count}} uncommitted case",
+      "title_other": "{{count}} uncommitted cases"
+    }
+  },
+  "all-commitments": "$t(commit:commit-status)",
+  "can-not-do-action-when-committing": "Can not do this action when committing, please try again after committed.",
+  "commit-status": "Blockchain hash status",
+  "commit-status-header": "Blockchain hash status",
+  "commit-status-tooltip": "This is the status of the blockchain commitment",
+  "commit-status-type": {
+    "committed": "Committed",
+    "committing": "Committing",
+    "failed": "Failed",
+    "staged": "Staged"
+  },
+  "commit-success": "Commit successfully",
+  "committed": "Committed",
+  "committing": "Committing...",
+  "confirm-commit-information": "Confirm your commit information"
+}

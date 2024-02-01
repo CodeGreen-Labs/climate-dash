@@ -1,0 +1,35 @@
+{
+  "can-not-do-action-when-committing": "提交中無法進行此操作, 請等待提交完成後再進行此操作",
+  "alert": {
+    "commit": {
+      "confirmed": "我已確認以上提交資料皆正確",
+      "content": "這個操作一但提交後將無法撤銷,請再次確認以上資料是否正確",
+      "title": "提交後將無法撤銷"
+    },
+    "commit-failed": {
+      "content": "提交案件未成功,請點選提交按鈕再次提交",
+      "title": "提交錯誤"
+    },
+    "committed": {
+      "content": "{{count}} 個案件已成功提交"
+    },
+    "uncommitted": {
+      "content_one": "您有 1 筆正在等待提交的案件，點擊提交按鈕來提交此案件",
+      "content_other": "您有 {{count}} 筆正在等待提交的案件，點擊提交按鈕來提交這些案件",
+      "title_one": "有 1 筆未提交案件",
+      "title_other": "有 {{count}} 筆未提交案件"
+    }
+  },
+  "all-commitments": "$t(common:all)$t(commit:commit-status)",
+  "commit-status": "區塊鏈提交狀態",
+  "commit-status-header": "狀態",
+  "commit-status-tooltip": "這是在區塊鏈上的提交狀態",
+  "commit-status-type": {
+    "committed": "已提交",
+    "committing": "提交中",
+    "failed": "提交失敗",
+    "staged": "待提交"
+  },
+  "commit-success": "提交成功",
+  "confirm-commit-information": "確認您的提交資料"
+}

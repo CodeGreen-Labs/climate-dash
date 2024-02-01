@@ -1,0 +1,37 @@
+{
+  "appId": "com.codegreen.climatedash",
+  "asar": true,
+  "directories": {
+    "output": "release"
+  },
+  "electronLanguages": ["en-US", "zh-TW"],
+  "files": ["dist-electron", "dist", "dist-services"],
+  "mac": {
+    "artifactName": "${productName}_${version}.${ext}",
+    "target": ["dmg", "zip"],
+    "electronLanguages": ["en", "zh_TW"],
+    "icon": "public/favicon.png"
+  },
+  "win": {
+    "artifactName": "${productName}_${version}.${ext}",
+    "icon": "public/favicon.png",
+    "target": [
+      {
+        "arch": ["x64"],
+        "target": "nsis"
+      }
+    ]
+  },
+  "nsis": {
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": false,
+    "oneClick": false,
+    "perMachine": false
+  },
+  "productName": "CodeGreen ClimateDASH",
+  "publish": {
+    "channel": "latest",
+    "provider": "generic",
+    "url": ""
+  }
+}

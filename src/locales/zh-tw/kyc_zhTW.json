@@ -1,0 +1,52 @@
+{
+  "all-kyc-level": "$t(common:all) $t(kyc:data.level)",
+  "all-kyc-status": "$t(common:all) $t(kyc:data.status)",
+  "commit-count": "未提交的案件",
+  "create": "建立 KYC",
+  "create-rule": "建立新的權限",
+  "credential-status-tooltip": "待提交: 憑證待提交到區塊鏈上; 已驗證: 憑證是有效的; 已過期: 憑證已經失效",
+  "dashboard": {
+    "expired": "過期的 KYC",
+    "pending": "待提交的 KYC",
+    "tooltip": {
+      "expired": "這個類別顯示所有已過期的KYC憑證",
+      "pending": "這個類別統計所有已經儲存但尚未提交的KYC憑證",
+      "total": "這個類別統計所有已經提交的KYC憑證",
+      "weekly-updates": "這個類別統計所有在過去七天內提交的KYC憑證"
+    },
+    "total": "總數",
+    "weekly-updates": "這週更新"
+  },
+  "data": {
+    "address": "錢包用戶聯絡地址",
+    "doc-number": "錢包用戶驗證文件號碼",
+    "ein-number": "錢包用戶編號 (EIN)",
+    "email": "錢包用戶電子郵箱",
+    "expiry-data": "到期日期",
+    "info": "KYC 資訊",
+    "level": "KYC 等級",
+    "provider": "KYC 驗證機構名稱: {{provider}}",
+    "provider-name": "KYC 驗證機構名稱: {{provider}}",
+    "public-key": "錢包公鑰",
+    "status": "KYC 狀態",
+    "user-info": "錢包用戶資訊",
+    "username": "錢包用戶名稱"
+  },
+  "description": "您的碳幣交易和銷毀操作受到此$t(level)的限制",
+  "export-kyc-example": "(1=$t(kyc-level-type.basic) / 2=$t(kyc-level-type.super)",
+  "kyc": "KYC",
+  "level": "KYC 等級",
+  "level-type": {
+    "basic": "基礎 KYC",
+    "super": "進階 KYC",
+    "none": "未驗證"
+  },
+  "mgt": "KYC $t(common:mgt)",
+  "search": "$t(common:action.search)$t(kyc:data.username), $t(kyc:data.public-key)",
+  "status": "KYC 狀態",
+  "status-type": {
+    "expired": "已失效",
+    "pending": "待提交",
+    "verified": "已驗證"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "alert": {
+    "conflict": {
+      "content": "Your transaction could conflict with existing asset rules based on counter-party credentials.",
+      "sub-content": "Are you sure you want to proceed with this transaction?",
+      "title": "Please confirm your action"
+    }
+  },
+  "all-kyc-level": "$t(kyc:data.level)",
+  "all-kyc-status": "$t(kyc:data.status)",
+  "commit-count": "Unstated changes",
+  "create": "Create a new Credential",
+  "credential-status-tooltip": "Pending: the credential is pending commitment to the blockchain; Verified: the credential is currently effective; Expired: the credential has expired",
+  "dashboard": {
+    "expired": "Expired cases",
+    "pending": "Pending cases",
+    "tooltip": {
+      "expired": "This count refers to all cases where the client's KYC credentials have expired.",
+      "pending": "This category highlights all the cases that are currently saved in our system but have not yet been committed.",
+      "total": "This category displays the total number of all committed cases since the inception of our database. This count includes only those cases that have been finalized and committed, and does not count cases that are still pending or saved in the system.",
+      "weekly-updates": "This is a summary of the new committed cases recorded on a weekly basis."
+    },
+    "total": "Total cases",
+    "weekly-updates": "Weekly new case updates"
+  },
+  "data": {
+    "address": "Account holder contact address",
+    "doc-number": "Account holder document number",
+    "ein-number": "Account holder employer identification number (EIN)",
+    "email": "Account holder contact email",
+    "expiry-data": "Expiry date",
+    "info": "Credential information",
+    "level": "Credential types",
+    "provider": "Credential provider: {{provider}}",
+    "provider-name": "Credential provider: {{provider}}",
+    "public-key": "Account holder public key",
+    "status": "Credential status",
+    "user-info": "Account holder information",
+    "username": "Account holder name"
+  },
+  "description": "Your KYC level affects carbon credit transfer operations.",
+  "export-kyc-example": "1 (1=$t(kyc-level-type.basic) / 2=$t(kyc-level-type.super))",
+  "kyc": "KYC",
+  "level": "Credential types",
+  "level-is": "KYC level: {{level}}",
+  "level-type": {
+    "basic": "Basic KYC/AML Credential",
+    "super": "Super Credential",
+    "none": "Unverified"
+  },
+  "mgt": "Credentials $t(common:mgt)",
+  "search": "$t(common:action.search) $t(kyc:data.username), $t(kyc:data.public-key)",
+  "status": "KYC status",
+  "status-type": {
+    "expired": "Expired",
+    "pending": "Pending",
+    "verified": "Verified"
+  }
+}

@@ -1,0 +1,130 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+    paths:
+      - '**.ts'
+      - '**.tsx'
+      - '.github/workflows/**'
+
+jobs:
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Copy npmrc and replace token
+        run: |
+          cp .npmrc.example .npmrc
+
+      - name: Replace .npmrc Token
+        run: |
+          sed -i 's|//npm.pkg.github.com/:_authToken=<Your auth token>|//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}|' .npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run TypeScript check
+        run: yarn tsc
+
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Copy npmrc and replace token
+        run: |
+          cp .npmrc.example .npmrc
+
+      - name: Replace .npmrc Token
+        run: |
+          sed -i 's|//npm.pkg.github.com/:_authToken=<Your auth token>|//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}|' .npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run ESLint check
+        run: yarn eslint
+  unit-test:
+    if:
+      contains(github.event.pull_request.head_commit.message, 'src/utils/') ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message,
+      'src/utils/'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Copy npmrc and replace token
+        run: |
+          cp .npmrc.example .npmrc
+
+      - name: Replace .npmrc Token
+        run: |
+          sed -i 's|//npm.pkg.github.com/:_authToken=<Your auth token>|//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}|' .npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run unit tests
+        run: yarn test
+  

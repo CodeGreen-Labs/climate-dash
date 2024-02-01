@@ -1,0 +1,83 @@
+name: Build and Release climateDASH
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+
+             
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v3.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Copy .npmrc.example to .npmrc
+        if: matrix.os != 'windows-latest'
+        run: cp .npmrc.example .npmrc
+
+      - name: Replace .npmrc Token
+        if: matrix.os != 'windows-latest'
+        run: |
+          sed -i 's|//npm.pkg.github.com/:_authToken=<Your auth token>|//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}|' .npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Copy .npmrc.example to .npmrc
+        if: matrix.os == 'windows-latest'
+        run: copy .npmrc.example .npmrc
+
+      - name: Replace .npmrc Token
+        if: matrix.os == 'windows-latest'
+        run: |
+          (Get-Content .npmrc.example) -replace '//npm.pkg.github.com/:_authToken=<Your auth token>', "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" | Set-Content .npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Copy .env.example to .env
+        if: matrix.os != 'windows-latest'
+        run: cp .env.example .env
+      
+      - name: Copy .env.example to .env
+        if: matrix.os == 'windows-latest'
+        run: copy .env.example .env
+
+      - name: Build
+        run: npm run build
+
+      - name: Package windows
+        if: matrix.os == 'windows-latest'
+        run: npm run package-win
+
+      - name: Delete Older Releases
+        uses: dev-drprasad/delete-older-releases@v0.2.1
+        with:
+          keep_latest: 0
+          delete_tag_pattern: alpha
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'release/*'
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      

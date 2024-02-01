@@ -1,0 +1,119 @@
+{
+  "action": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "choose-file": "Choose File",
+    "close": "Close",
+    "commit": "Commit",
+    "continue": "Continue",
+    "continue-editing": "Continue editing",
+    "continue-sending": "Continue sending",
+    "copy": "Copy",
+    "create": "Create",
+    "edit": "Edit",
+    "edit-existing": "Edit existing $t({{key}}) ",
+    "export": "Export",
+    "get-started": "Get started",
+    "hide-details": "Hide details",
+    "import": "Import",
+    "import-example": "Download sample CSV",
+    "leave": "Leave",
+    "leave-editing": "Leave without saving",
+    "login": "Login",
+    "logout": "Sign out",
+    "next": "Next",
+    "ok": "Ok",
+    "open": "Open",
+    "profile": "Profile",
+    "refresh": "Refresh",
+    "register": "Register / Login",
+    "remove": "Remove",
+    "retire": "Retire",
+    "save": "Save",
+    "search": "Search",
+    "send": "Send",
+    "setting": "Setting",
+    "submit": "Submit",
+    "update": "Update",
+    "upload": "Upload",
+    "view": "View",
+    "view-more": "View more"
+  },
+  "actions": "Actions",
+  "alert": {
+    "edit-existing": {
+      "content": "The $t({{key}}) you are attempting to create appears to be already registered within the system. How would you like to proceed?",
+      "title": "This $t({{key}}) already exists!"
+    },
+    "export": {
+      "empty-content": "The file content is empty"
+    },
+    "leave": {
+      "title": "Are you sure you want to leave?"
+    },
+    "unsaved-work": {
+      "content": "There are unsaved modifications in your workspace. Are you sure you want to exit without saving?",
+      "title": "Alert: Unsaved work"
+    }
+  },
+  "all": "All",
+  "apply": "Apply",
+  "count": "Count",
+  "create-at": "Create at",
+  "empty": "Empty",
+  "file-uploader": {
+    "description": "Please upload {{count}} file ({{acceptTypes}}).",
+    "drop-here": "Drop the file here ...",
+    "title": "Drag & Drop or choose file to upload",
+    "too-many-files": "Too many files. Please upload {{count}} file ({{acceptTypes}}).",
+    "unsupported": "Unsupported file type. Please upload {{acceptTypes}} files."
+  },
+  "home": {
+    "subtitle": "Welcome to ClimateDASH",
+    "title": "Welcome to ClimateDASH"
+  },
+  "import-data": {
+    "error": "Import error",
+    "title": "Import table data"
+  },
+  "info-tab": "Info",
+  "last-updated-time": "Last updated time",
+  "loading": "Loading...",
+  "mgt": "Management",
+  "no-option": "No option",
+  "not-found": {
+    "back-home": "Go to homepage",
+    "page-is-not-exist": "The page you have been looking for does not exist."
+  },
+  "optional": "Optional",
+  "pagination": {
+    "of": "of",
+    "rows-per-page": "Rows per page"
+  },
+  "preview-data": "Here’s a preview of your data",
+  "quantity-held": "Quantity held",
+  "remove-all-filters": "Remove all filters",
+  "required-info": "* Required information",
+  "review": "Review information",
+  "saved": "Saved",
+  "saved-failed": "Save failed. Please try again.",
+  "step": {
+    "confirm": "Confirm information",
+    "enter": "Enter information"
+  },
+  "time": "time",
+  "total-is": "Total: {{total}}",
+  "type": "Type",
+  "updated-at": "Updated at",
+  "uploaded-failed": "Upload failed,please try again",
+  "uploaded-successfully": "Uploaded successfully",
+  "validation": {
+    "duplicate-wallet-address": "This wallet address is already associated to this credential. Please enter another wallet address.",
+    "invalid-email-address": "Invalid email address",
+    "invalid-wallet-address": "Invalid wallet address",
+    "must-be-alphanumeric": "$t({{key}}) must be alphanumeric",
+    "must-be-numeric": "$t({{key}}) must be numeric",
+    "required": "$t({{key}}) is required"
+  },
+  "value-copied": "{{name}} Value copied"
+}

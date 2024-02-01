@@ -1,0 +1,4 @@
+//npm.pkg.github.com/:_authToken=<Your auth token>
+
+@codegreen-labs:registry=https://npm.pkg.github.com
+shamefully-hoist=true

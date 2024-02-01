@@ -1,0 +1,31 @@
+{
+  "climate": "氣候",
+  "dashboard": "儀表板",
+  "explorer": "區塊鏈瀏覽器",
+  "kyc": "KYC 管理",
+  "my-wallet": "我的錢包",
+  "route": {
+    "/explorer": "區塊鏈瀏覽器",
+    "/explorer/details": "詳細資料",
+    "/kyc": "KYC",
+    "/kyc/create": "新增 KYC 憑證",
+    "/kyc/dashboard": "儀表板",
+    "/kyc/details": "KYC 詳細資料",
+    "/kyc/edit": "編輯 KYC",
+    "/kyc/import-preview": "KYC 匯入預覽",
+    "/rule": "規則管理",
+    "/rule/create": "建立規則",
+    "/rule/dashboard": "儀表板",
+    "/rule/details": "查看詳細資料",
+    "/rule/edit": "編輯規則",
+    "/wallet": "我的錢包",
+    "/wallet/create-mnemonic": "建立錢包",
+    "/wallet/detail": "我的錢包",
+    "/wallet/import-mnemonic": "導入錢包",
+    "/wallet/retire": "銷毀",
+    "/wallet/send": "發送"
+  },
+  "rule": "規則管理",
+  "tokenizer": "代幣鑄造",
+  "wallet": "錢包"
+}
