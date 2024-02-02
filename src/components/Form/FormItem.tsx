@@ -201,6 +201,7 @@ const FormItem = ({
       default:
         return (
           <TextField
+            {...field}
             key={`${header}-${defaultValue}`}
             type={type}
             defaultValue={defaultValue}
@@ -209,7 +210,6 @@ const FormItem = ({
             required={rules?.required as boolean}
             label={transHeader}
             aria-describedby={header}
-            {...field}
             error={error}
             helperText={errorMessage}
             id={accessorKey || header}
