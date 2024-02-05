@@ -9,6 +9,10 @@ This repository holds the source code for the ClimateDASH in the Climate Token D
 - [Chia Blockchain](https://github.com/Chia-Network/chia-blockchain)
 
 
+# System Architecture
+
+![alt system-architecture](/public/system-architecture.png "system-architecture")
+
 # Structure
 
 - `electron`:Contains the Electron start code.
