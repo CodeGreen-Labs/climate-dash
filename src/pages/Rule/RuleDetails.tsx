@@ -44,9 +44,7 @@ const RuleDetails = () => {
           'unit.marketplaceIdentifier',
           {
             cell: () =>
-              shortenHash(
-                removePrefix0x(editState?.unit?.marketplaceIdentifier || '')
-              ),
+              removePrefix0x(editState?.unit?.marketplaceIdentifier || ''),
           },
         ],
       ],
