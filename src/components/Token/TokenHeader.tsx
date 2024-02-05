@@ -85,7 +85,7 @@ const TokenHeader = () => {
               address: shortenHash(address),
             })}
           </Typography>
-          <CopyBtn name="Address" value={address} />
+          <CopyBtn name="wallet:address" value={address} />
           <TokenViewDetailBtn address={address || ''} />
         </Stack>
       </Box>

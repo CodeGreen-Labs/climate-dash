@@ -65,5 +65,5 @@
     "warehouse-unit-id": "Warehouse unit ID"
   },
   "mgt": "Asset Rule $t(common:mgt)",
-  "search": "Search by $t(rule:data.project-id), $t(rule:data.project-name), CAT ID, $t(rule:data.unit-vintage-year), $t(rule:data.unit-serial-number)"
+  "search": "Search by $t(rule:data.project-name), asset ID, $t(rule:data.unit-vintage-year)"
 }
