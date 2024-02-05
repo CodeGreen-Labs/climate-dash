@@ -11,7 +11,7 @@ import { CommitTable } from '@/types/dataLayerTypes'
 import { DetailFormRows, FormRow } from '@/types/formTypes'
 import type { RuleEditForm, RuleEditFormKeys } from '@/types/ruleTypes'
 import type { TabInfo } from '@/types/tabFormTypes'
-import { removePrefix0x, shortenHash } from '@/utils/chia'
+import { removePrefix0x } from '@/utils/chia'
 import { formatDate, formatTime } from '@/utils/datetime'
 import {
   createDetailRows,
