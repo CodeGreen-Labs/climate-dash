@@ -1,8 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 import { API_CALL_TIMEOUT } from '@/constants/api'
+import { getConfig } from '@/utils/yamlConfigLoader'
 
-export const dataLayerEndPoint = import.meta.env.VITE_DATA_LAYER_END_POINT
+export const dataLayerEndPoint = getConfig().dataLayerEndPoint
 
 export const dataLayerApi = createApi({
   reducerPath: 'dataLayerApi',
@@ -10,8 +11,7 @@ export const dataLayerApi = createApi({
     baseUrl: dataLayerEndPoint,
     timeout: API_CALL_TIMEOUT,
     prepareHeaders: (headers) => {
-      // TODO: wait for cadt to be implemented
-      const accessToken = ''
+      const accessToken = getConfig().cadtApiKey
       if (accessToken) {
         headers.set('authorization', `Bearer ${accessToken}`)
       }

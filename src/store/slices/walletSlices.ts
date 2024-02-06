@@ -25,6 +25,7 @@ import {
   validateMnemonicPhrase,
 } from '@/utils/chia'
 import { getStorage, removeStorage, setStorage } from '@/utils/storage'
+import { getConfig } from '@/utils/yamlConfigLoader'
 
 import { startAppListening } from '../listenerMiddleware'
 
@@ -53,7 +54,7 @@ const initialState: State = {
     ids: Object.keys(assets),
     entities: Object.values(assets),
   }),
-  chain: import.meta.env.VITE_NETWORK,
+  chain: getConfig().network as ChainEnum,
   exportAssetList: {},
 }
 
