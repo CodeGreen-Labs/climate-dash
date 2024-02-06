@@ -49,7 +49,7 @@ const TokenCard = (props: IProps) => {
         updateExportAssets({
           assetId: props.assetId,
           projectName: projectData?.projectName || '',
-          warehouseProjectId: projectData?.warehouseProjectId || '',
+          projectId: projectData?.projectId || '',
           vintageYear: unitData?.vintageYear || 0,
           currentRegistry: projectData?.currentRegistry || '',
           balance: mojoToDisplayBalance(

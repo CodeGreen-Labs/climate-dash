@@ -10,7 +10,7 @@ const TokenListExport = () => {
     <ExportButton
       data={Object.values(exportAssetList)}
       headers={[
-        { label: 'External Project ID', key: 'warehouseProjectId' },
+        { label: 'Project ID', key: 'projectId' },
         { label: 'Asset Id', key: 'assetId' },
         { label: 'Name', key: 'projectName' },
         { label: 'Vintage Year', key: 'vintageYear' },
