@@ -5,11 +5,12 @@ import type {
   ActivityRequest,
   ActivityResponse,
 } from '@/types/climateExplorerTypes'
+import { getConfig } from '@/utils/yamlConfigLoader'
 
 export const climateExplorerApi = createApi({
   reducerPath: 'climateExplorerApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_CLIMATE_EXPLORER_CHIA_URL,
+    baseUrl: getConfig().climateExplorerChiaUrl,
     timeout: API_CALL_TIMEOUT,
   }),
   endpoints: (builder) => ({

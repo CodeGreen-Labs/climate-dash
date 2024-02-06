@@ -1,3 +1,3 @@
-export const API_CALL_TIMEOUT = parseInt(
-  import.meta.env.VITE_API_CALL_TIMEOUT || 60000
-)
+import { getConfig } from '@/utils/yamlConfigLoader'
+
+export const API_CALL_TIMEOUT = getConfig().apiCallTimeout

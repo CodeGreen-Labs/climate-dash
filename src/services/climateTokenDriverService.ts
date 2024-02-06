@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 import { API_CALL_TIMEOUT } from '@/constants/api'
-
+import { getConfig } from '@/utils/yamlConfigLoader'
 interface PermissionlessRetireParams {
   assetId: string
   metadata: object
@@ -31,7 +31,7 @@ interface KeysResponse {
 export const climateTokenDriverApi = createApi({
   reducerPath: 'climateTokenDriverApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_CLIMATE_TOKEN_DRIVER_URL,
+    baseUrl: getConfig().climateTokenDriverUrl,
     timeout: API_CALL_TIMEOUT,
   }),
   endpoints: (builder) => ({

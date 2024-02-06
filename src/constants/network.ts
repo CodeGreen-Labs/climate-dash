@@ -1,4 +1,5 @@
 import { ChainEnum, ChainSet } from '@/types/chia'
+import { getConfig } from '@/utils/yamlConfigLoader'
 
 export const chains: ChainSet = {
   [ChainEnum.Mainnet]: {
@@ -33,4 +34,4 @@ export const chains: ChainSet = {
 export const DEAD_PUZZLE_HASH =
   '0x000000000000000000000000000000000000000000000000000000000000dead'
 
-export const chain = chains[import.meta.env.VITE_NETWORK as keyof typeof chains]
+export const chain = chains[getConfig().network as keyof typeof chains]

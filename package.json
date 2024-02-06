@@ -1,6 +1,6 @@
 {
   "name": "climateDASH",
-  "version": "1.0.3-alpha.2",
+  "version": "1.0.3-alpha.3",
   "description": "CodeGreen climateDASH",
   "main": "dist-electron/main/index.js",
   "license": "MIT",
@@ -54,6 +54,7 @@
     "electron-updater": "^5.3.0",
     "fuse.js": "^6.6.2",
     "i18next": "^23.2.3",
+    "js-yaml": "^4.1.0",
     "kill-port": "^2.0.1",
     "lodash": "^4.17.21",
     "notistack": "^3.0.1",
