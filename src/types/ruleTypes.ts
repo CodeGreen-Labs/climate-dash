@@ -77,6 +77,7 @@ export type RuleEditFormKeys =
 
 export type RuleListKeys =
   | keyof Rule
+  | 'project.projectId'
   | 'project.projectName'
   | 'unit.vintageYear'
   | 'action'

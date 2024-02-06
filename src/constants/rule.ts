@@ -8,7 +8,7 @@ export const ruleImportDataHeader = [
   'kyc_receiving',
   'kyc_retirement',
   'kyc_sending',
-  'origin_project_id',
+  'project.projectId',
   'vintage_year',
   'warehouse_unit_id',
 ] as Array<keyof Rule>

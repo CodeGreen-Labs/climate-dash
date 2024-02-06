@@ -69,12 +69,11 @@ function RuleList() {
   )
 
   const [postCommit] = usePostCommitMutation()
-
   const columns = useMemo<CrudColumn<Rule, RuleListKeys>[]>(
     () => [
       {
-        accessorKey: 'origin_project_id',
-        header: 'rule:data.origin-project-id',
+        accessorKey: 'project.projectId',
+        header: 'rule:data.project-id',
         cell: (info) => (
           <ProjectInfoDisplay
             paramsKey="projectId"

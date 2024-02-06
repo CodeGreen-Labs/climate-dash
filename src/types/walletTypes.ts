@@ -19,7 +19,7 @@ export interface Asset {
 
 export interface exportAssetDetail {
   assetId: string
-  warehouseProjectId: string
+  projectId: string
   projectName: string
   vintageYear: number
   currentRegistry: string
