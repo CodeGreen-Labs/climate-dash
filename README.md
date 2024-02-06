@@ -28,7 +28,20 @@ The ClimateDASH interface offers four user-facing modules:
 
 ## System Architecture
 
-<!-- TODO: describe arch -->
+![Architecture](/public/system-architecture.png "System Architecture")
+
+- `Frontend (this repo)`: The Electron application serves as the user interface,
+  providing a seamless and interactive experience for users. It communicates
+  with the backend services through HTTP protocols.
+- `Backend Services`:
+  - `CADT`: This service handles climate-related data and provides
+    functionalities related to climate information and analysis.
+- `Blockchain Integration`:
+  - The backend services CADT interact with a shared blockchain component.
+  - The blockchain serves as a decentralized and secure ledger that ensures data
+    integrity, transparency, and reliability.
+  - Chia RPC enable the backend services to communicate with and make
+    transactions on the blockchain.
 
 ## Project Structure
 
@@ -64,7 +77,7 @@ installed:
 
 #### Generate GitHub Token for NPM Registry Authentication
 
-This step is required since <!-- TODO: why? -->
+This step is required for secure authentication when accessing GitHub Packages for npm. Here's a quick guide:
 
 1. **Copy `.npmrc.example` to `.npmrc`:**
 
@@ -159,13 +172,14 @@ The application requires the following configurations:
 - Copy `.env.example` file to `.env` file in the root directory of the project.
 - Add the following configuration to the `.env` file like:
 
-<!-- TODO: add example? -->
-
 ```
-VITE_DATA_LAYER_END_POINT=<Replace with the data layer endpoint URL>
-VITE_CLIMATE_TOKEN_DRIVER_URL=<Replace with the Climate Token Driver URL>
-VITE_CLIMATE_EXPLORER_CHIA_URL=<Replace with the Climate Explorer Chia URL>
-...
+VITE_DATA_LAYER_END_POINT=https://cadt.codegreen.org/v1/
+VITE_CLIMATE_TOKEN_DRIVER_URL=http://localhost:31314/v1/
+VITE_CLIMATE_EXPLORER_CHIA_URL=https://explorer-cadt.codegreen.org/v1/
+VITE_NETWORK = 0x02
+VITE_API_CALL_TIMEOUT = 60000
+CLIMATE_TOKEN_DRIVER_PORT=31314
+CLIMATE_EXPLORER_CHIA_PORT=31313
 ```
 
 Please make sure to include the .env file in your project and provide the
@@ -212,22 +226,7 @@ $ npm run package-win
 $ npm run package-mac
 ```
 
-## Interaction with Backend Services via Blockchain
 
-<!-- TODO: move to architecture? -->
-
-- `Frontend (this repo)`: The Electron application serves as the user interface,
-  providing a seamless and interactive experience for users. It communicates
-  with the backend services through HTTP protocols.
-- `Backend Services`:
-  - `CADT`: This service handles climate-related data and provides
-    functionalities related to climate information and analysis.
-- `Blockchain Integration`:
-  - The backend services CADT interact with a shared blockchain component.
-  - The blockchain serves as a decentralized and secure ledger that ensures data
-    integrity, transparency, and reliability.
-  - Chia RPC enable the backend services to communicate with and make
-    transactions on the blockchain.
 
 ## Technologies Used
 
