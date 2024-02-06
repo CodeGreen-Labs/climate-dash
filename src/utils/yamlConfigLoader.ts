@@ -9,20 +9,20 @@ const version = packageJson.version
 
 interface Config {
   dataLayerEndPoint: string
+  dataLayerApiKey: string
   climateTokenDriverUrl: string
   climateExplorerChiaUrl: string
   network: string
-  cadtApiKey: string
   apiCallTimeout: number
   version: string
 }
 
 const defaultConfig: Config = {
   dataLayerEndPoint: import.meta.env.VITE_DATA_LAYER_END_POINT,
+  dataLayerApiKey: import.meta.env.VITE_DATA_LAYER_API_KEY,
   climateTokenDriverUrl: import.meta.env.VITE_CLIMATE_TOKEN_DRIVER_URL,
   climateExplorerChiaUrl: import.meta.env.VITE_CLIMATE_EXPLORER_CHIA_URL,
   network: import.meta.env.VITE_NETWORK,
-  cadtApiKey: import.meta.env.VITE_CADT_API_KEY,
   apiCallTimeout: Number(import.meta.env.VITE_API_CALL_TIMEOUT || 60000),
   version,
 }

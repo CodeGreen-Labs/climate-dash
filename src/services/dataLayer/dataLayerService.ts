@@ -11,7 +11,7 @@ export const dataLayerApi = createApi({
     baseUrl: dataLayerEndPoint,
     timeout: API_CALL_TIMEOUT,
     prepareHeaders: (headers) => {
-      const accessToken = getConfig().cadtApiKey
+      const accessToken = getConfig().dataLayerApiKey
       if (accessToken) {
         headers.set('authorization', `Bearer ${accessToken}`)
       }
