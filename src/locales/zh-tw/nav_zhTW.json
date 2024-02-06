@@ -3,7 +3,7 @@
   "dashboard": "儀表板",
   "explorer": "區塊鏈瀏覽器",
   "kyc": "KYC 管理",
-  "my-wallet": "我的錢包",
+  "my-wallet": "錢包",
   "route": {
     "/explorer": "區塊鏈瀏覽器",
     "/explorer/details": "詳細資料",
@@ -18,9 +18,9 @@
     "/rule/dashboard": "儀表板",
     "/rule/details": "查看詳細資料",
     "/rule/edit": "編輯規則",
-    "/wallet": "我的錢包",
+    "/wallet": "錢包",
     "/wallet/create-mnemonic": "建立錢包",
-    "/wallet/detail": "我的錢包",
+    "/wallet/detail": "錢包",
     "/wallet/import-mnemonic": "導入錢包",
     "/wallet/retire": "銷毀",
     "/wallet/send": "發送"

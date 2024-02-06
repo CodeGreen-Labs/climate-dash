@@ -18,9 +18,9 @@
     "/rule/dashboard": "Dashboard",
     "/rule/details": "Rule details",
     "/rule/edit": "Edit rule",
-    "/wallet": "Account Wallet",
+    "/wallet": "Account wallet",
     "/wallet/create-mnemonic": "Create a wallet",
-    "/wallet/detail": "Account Wallet",
+    "/wallet/detail": "Account wallet",
     "/wallet/import-mnemonic": "Import  wallet",
     "/wallet/retire": "Retire",
     "/wallet/send": "Send"
