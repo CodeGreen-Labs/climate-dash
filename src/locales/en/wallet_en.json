@@ -129,7 +129,8 @@
     "title": "Import your mnemonic"
   },
   "my-assets": "Held Assets",
-  "my-wallet": "Accounts",
+  "my-wallet": "Account Wallet",
+  "not-synced": "Not synced",
   "phrase": {
     "content": "Write backup phrases down or save them to a secure place, they cannot be recovered or retrieved if you lose them.",
     "title": "Backup phrase"
@@ -156,6 +157,7 @@
     "transfer-from": "Transfer from",
     "transfer-to": "Transfer to"
   },
+  "synced": "Synced",
   "transaction": {
     "info": "Transaction information",
     "input": {
@@ -173,7 +175,5 @@
   "transaction-history": "Transaction history",
   "transaction-information": "Transaction information",
   "wallet-kyc-level": "Account holder credential types",
-  "welcome": "Welcome to Climate Wallet",
-  "synced": "Synced",
-  "not-synced": "Not synced"
+  "welcome": "Welcome to Climate Wallet"
 }
