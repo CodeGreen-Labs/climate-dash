@@ -8,6 +8,7 @@ interface ImportMetaEnv {
   readonly VITE_API_CALL_TIMEOUT: string
   readonly VITE_ABLY_API_KEY: string
   readonly VITE_CLIMATE_TOKEN_DRIVER_URL: string
+  readonly VITE_CADT_API_KEY: string
 }
 
 declare global {
