@@ -17,7 +17,7 @@ const TokenDetail = ({ projectData, unitData }: Props) => {
     () => [
       { title: 'rule:data.cat-id', field: assetId },
       { title: 'rule:data.unit-vintage-year', field: unitData?.vintageYear },
-      { title: 'rule:data.origin-project-id', field: projectData?.projectId },
+      { title: 'rule:data.project-id', field: projectData?.projectId },
       {
         title: 'rule:data.current-registry',
         field: projectData?.currentRegistry,

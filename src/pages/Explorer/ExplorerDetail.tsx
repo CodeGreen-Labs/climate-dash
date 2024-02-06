@@ -45,7 +45,7 @@ const ExplorerDetail = () => {
         field: issuanceInfo.unit?.vintageYear,
       },
       {
-        title: 'rule:data.origin-project-id',
+        title: 'rule:data.project-id',
         field: issuanceInfo.project?.projectId,
       },
       {
