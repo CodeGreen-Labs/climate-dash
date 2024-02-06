@@ -28,15 +28,15 @@ The ClimateDASH interface offers four user-facing modules:
 
 ## System Architecture
 
-![Architecture](/public/system-architecture.png "System Architecture")
+![Architecture](./public/system-architecture.png 'System Architecture')
 
-- `Frontend (this repo)`: The Electron application serves as the user interface,
+- Frontend (this repo): The Electron application serves as the user interface,
   providing a seamless and interactive experience for users. It communicates
   with the backend services through HTTP protocols.
-- `Backend Services`:
+- Backend Services:
   - `CADT`: This service handles climate-related data and provides
     functionalities related to climate information and analysis.
-- `Blockchain Integration`:
+- Blockchain Integration:
   - The backend services CADT interact with a shared blockchain component.
   - The blockchain serves as a decentralized and secure ledger that ensures data
     integrity, transparency, and reliability.
@@ -77,7 +77,8 @@ installed:
 
 #### Generate GitHub Token for NPM Registry Authentication
 
-This step is required for secure authentication when accessing GitHub Packages for npm. Here's a quick guide:
+This step is required for secure authentication when accessing GitHub Packages
+for npm. Here's a quick guide:
 
 1. **Copy `.npmrc.example` to `.npmrc`:**
 
@@ -172,7 +173,7 @@ The application requires the following configurations:
 - Copy `.env.example` file to `.env` file in the root directory of the project.
 - Add the following configuration to the `.env` file like:
 
-```
+```sh
 VITE_DATA_LAYER_END_POINT=https://cadt.codegreen.org/v1/
 VITE_CLIMATE_TOKEN_DRIVER_URL=http://localhost:31314/v1/
 VITE_CLIMATE_EXPLORER_CHIA_URL=https://explorer-cadt.codegreen.org/v1/
@@ -226,29 +227,21 @@ $ npm run package-win
 $ npm run package-mac
 ```
 
-
-
-## Technologies Used
-
-- React
-- Electron
-- Redux Toolkit
-- Vite
-- TypeScript
-
 ## Scripts
 
-- dev: Run the Vite development server.
-- build: Build the project using TypeScript and Vite.
-- test: Run tests using Vitest.
-- package: Package the Electron app.
-- package-all: Package the Electron app for all platforms.
-- package-mac: Package the Electron app for macOS.
-- package-win: Package the Electron app for Windows.
-- prerelease: Create a pre-release version and push tags.
-- release: Create a patch release and push tags.
-- eslint: Run ESLint for code linting.
-- prepare: Run Vite Node to prepare the project.
+Below is a list of available scripts you can use in this project with `npm run`:
+
+- `dev`: Run the Vite development server.
+- `build`: Build the project using TypeScript and Vite.
+- `test`: Run tests using Vitest.
+- `package`: Package the Electron app.
+- `package-all`: Package the Electron app for all platforms.
+- `package-mac`: Package the Electron app for macOS.
+- `package-win`: Package the Electron app for Windows.
+- `prerelease`: Create a pre-release version and push tags.
+- `release`: Create a patch release and push tags.
+- `eslint`: Run ESLint for code linting.
+- `prepare`: Run Vite Node to prepare the project.
 
 ## Contributing
 
