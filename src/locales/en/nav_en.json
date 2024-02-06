@@ -3,7 +3,7 @@
   "dashboard": "Dashboard",
   "explorer": "DASHboard",
   "kyc": "Credentials",
-  "my-wallet": "Accounts (Wallet)",
+  "my-wallet": "Account Wallet",
   "route": {
     "/explorer": "DASHboard",
     "/explorer/details": "DASHboard details",
@@ -18,14 +18,14 @@
     "/rule/dashboard": "Dashboard",
     "/rule/details": "Rule details",
     "/rule/edit": "Edit rule",
-    "/wallet": "Accounts",
+    "/wallet": "Account Wallet",
     "/wallet/create-mnemonic": "Create a wallet",
-    "/wallet/detail": "Accounts",
+    "/wallet/detail": "Account Wallet",
     "/wallet/import-mnemonic": "Import  wallet",
     "/wallet/retire": "Retire",
     "/wallet/send": "Send"
   },
   "rule": "Asset Rules",
   "tokenizer": "Tokenizer",
-  "wallet": "Accounts (Wallet)"
+  "wallet": "Account Wallet"
 }
