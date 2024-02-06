@@ -2,12 +2,12 @@ import { useGetWalletBalanceQuery } from '@codegreen-labs/api-react'
 import { Box, Stack, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { WalletBgColor } from '@/constants/themeConfig'
 import { IClimateToken } from '@/hooks/chia'
 import useClimateWarehouseData from '@/hooks/useClimateWarehouseData'
+import { useAppDispatch } from '@/store'
 import { updateExportAssets } from '@/store/slices/walletSlices'
 import { mojoToDisplayBalance } from '@/utils/CoinConverter'
 
@@ -41,7 +41,7 @@ const TokenCard = (props: IProps) => {
     useGetWalletBalanceQuery({
       walletId: props.walletId,
     })
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     if (!isClimateWarehouseDataLoading && !isBalanceLoading) {
